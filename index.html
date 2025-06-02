@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mainp.css">
+</head>
+<body>
+      <script src="mainp.js"></script>
+
+     <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+           <div class="logo">
+                <img src="logo.png" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('index')">Home</a></li>
+                <li><a href="#" onclick="showPage('courses')">Courses</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+            </ul>
+
+           <!--  some sorta hamburger thing helpful for using the site on phone -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                 <div class="hero-logo">
+                    <img src="logo.png" class="hero-logo-img">
+                </div>
+                <h1>Knowledge Center</h1>
+                <p>..a pathway to excellence </p>
+                <p>Empowering 11th, 12th & Dropper Students to Achieve Their Dreams</p>
+                <a href="#" onclick="showPage('courses')" class="cta-button">Explore Courses</a>
+            </div>
+
+            <!-- founder part  -->
+            <div class="founders-section">
+                <h2 class="section-title" style="color: #ffffff;">Meet Our Founder</h2>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <div class="founder-pic">
+                            <img src="founder.jpg">
+                        </div>
+                        <h3> Abhishek Kumar</h3>
+                        <p style="color: green;">Physics, Chemistry & Mathematics Expert</p>
+                        <p>IIT Kanpur (CS) Graduate with 10+ years of JEE coaching experience. Specialized in all three subjects - PCM, and has mentored over 200 successful JEE candidates with a unique integrated teaching approach.</p>
+                        <div style="margin-top: 1rem;">
+                            B.Tech computer science
+                        </div>
+                        <div style="margin-top: 0.5rem;">
+                            JEE Advanced AIR 140 (2008?)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Rd Number 24B</p>
+                    <p>Rajeev Nagar 800024</p>
+                    <p>Bihar, India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Get In Touch</h3>
+                    <p> +91 6202108312</p>
+                    <p> knowledge.center.patna@gmail.com</p>
+                    <p> Mon-Sat: 10 AM - 8 PM</p>
+                </div>
+                
+            </div>
+            <div style="border-top: 1px solid #666; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2025 Knowledge Center. All rights reserved. | Empowering JEE Dreams Since 2014</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
