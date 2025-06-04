@@ -4,6 +4,9 @@ function showPage(courses) {
 function showPage(gallery) {
     window.location.href = gallery + '.html';
 }
+function showPage(kcjunior) {
+    window.location.href = kcjunior + '.html';
+}
 
 function toggleMenu() {
     const navMenu = document.querySelector('.nav-links');
