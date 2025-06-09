@@ -1,0 +1,347 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #071a00 0%, #1a1a1a 50%, #333333 100%);
+    min-height: 100vh;
+}
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+    padding: 60px 20px; 
+}
+
+      
+/* Navigation bar */
+
+nav {
+    background: #001510;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 20px;
+}
+
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* finding way to make it cool and try the transition part */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #00ff41;
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(35deg, #00ff41, #061700);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgb(127, 197, 137);
+            margin-bottom: 15px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 100px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            background: white;
+            cursor: pointer;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        /* Testimonials Section */
+        .testimonials-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: #667eea;
+            opacity: 0.3;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .student-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .student-details h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .student-details p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #172a18, #232323);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 15px;
+            }
+            
+            .section-title h2, .testimonials-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+
+       
+/* Footer */
+footer {
+    background: rgba(7, 7, 7, 0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section i {
+    margin-right: 0.5rem;
+    color: #00ff41;
+}
+
+.footer-bottom {
+    border-top: 1px solid #666;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+/* mobile work for website */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px;
+        max-width: 150px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(6, 23, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .imp-logo-img {  /* Fixed class name */
+        height: 120px;
+        max-width: 300px;
+    }
+
+    .imp h1 {  /* Fixed selector */
+        font-size: 2rem;
+    }
+
+    .imp p {  /* Fixed selector */
+        font-size: 1rem;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .imp-logo-img {  /* Fixed class name */
+        height: 100px;
+        max-width: 250px;
+    }
+    
+    .logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .imp h1 {  /* Fixed selector */
+        font-size: 1.8rem;
+    }
+    
+}
